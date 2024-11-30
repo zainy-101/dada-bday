@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap"
+      rel="stylesheet"
+    />
+    <title>Birthday Gift Site</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <form id="birthdayForm">
+        <h1>Happy Birthday This Gift Is For You 🤭😚</h1>
+        <!-- <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" required />
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required />
+        </div>
+        <div class="form-group">
+          <label for="picture">Upload Picture:</label>
+          <input
+            type="file"
+            id="picture"
+            name="picture"
+            accept="image/*"
+            required
+          />
+        </div> -->
+        <button class="buttonSubmit" type="button" onclick="displayBirthday()">
+          OPEN GIFT 🎁
+        </button>
+      </form>
+    </div>
+
+    <div class="header" id="birthdayHeader" style="display: none">
+      <h1 id="birthdayName"></h1>
+      <img id="birthdayImage" src="" alt="Birthday Image" class="avatar" />
+      <h2 class="age" id="birthdayAge"></h2>
+      <h4 class="date" id="birthdayDate"></h4>
+    </div>
+
+    <!-- gift sections -->
+
+    <script>
+      const start = () => {
+        setTimeout(function () {
+          confetti.start();
+        }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+      };
+
+      //  for stopping the confetti
+
+      const stop = () => {
+        setTimeout(function () {
+          confetti.stop();
+        }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+      };
+      // after this here we are calling both the function so it works
+      start();
+    </script>
+
+    <div class="gift-section" style="display: none">
+      <h2 class="gift-title">Here's how happy I am for you today 🥳</h2>
+      <h3 class="gift-hint">(Hover over the gift)</h3>
+      <div class="happy-gif gift-cover"></div>
+    </div>
+
+    <div class="gift-section" style="display: none">
+      <h2 class="gift-title">US TWO JUST MONKEYS 🐒</h2>
+      <div class="respect-gif gift-cover"></div>
+    </div>
+
+    <div class="gift-section" style="display: none">
+      <h2 class="gift-title">TO THE ONE I CAN ALWAYS BE SILYY WITH 😋</h2>
+      <div class="genius-gif gift-cover"></div>
+    </div>
+
+    <div class="gift-section" style="display: none">
+      <h2 class="gift-title">OUR MISTER BEACH MAN 💪</h2>
+      <div class="goat-gif gift-cover"></div>
+    </div>
+
+    <div class="gift-section" style="display: none">
+      <h2 class="gift-title">TO YOUR SURPRISES 🤭</h2>
+      <div class="goat2-gif gift-cover"></div>
+    </div>
+
+    <div class="gift-section" style="display: none">
+      <h2 class="gift-title">TO MY CUDDLE BUDDY 🧸</h2>
+      <div class="goat3-gif gift-cover"></div>
+    </div>
+
+    <div class="gift-section" style="display: none">
+      <h2 class="gift-title">OUR NFS DRIVER 🏎️</h2>
+      <div class="goat4-gif gift-cover"></div>
+    </div>
+
+    <div class="gift-section" style="display: none">
+      <h2 class="gift-title">
+        TO THE ONE THAT HAS BEEN THROUGH TRIAL WITH US ALL ✨
+      </h2>
+      <div class="goat6-gif gift-cover"></div>
+    </div>
+
+    <div class="gift-section" style="display: none">
+      <h2 class="gift-title">TO THE ONE WHOSE LOVE IS UNCONDITIONAL 💖</h2>
+      <div class="goat5-gif gift-cover"></div>
+    </div>
+
+    <div class="gift-section" style="display: none">
+      <h2 class="gift-title">TO THE LIGHT OF OUR LIFE 🕯️</h2>
+      <div class="cheers-gif gift-cover"></div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer" style="display: none">
+      <p>created by Your Fav Daugher :)</p>
+    </div>
+
+    <audio id="birthdayAudio" src="song.MP3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+    <script src="confetti.js"></script>
+  </body>
+</html>
